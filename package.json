@@ -1,8 +1,8 @@
 {
   "name": "homework_1",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "homework nodeJS",
+  "main": "server/app.js",
   "scripts": {
     "serv": "cross-env NODE_ENV=development nodemon ./server/app.js --exec babel-node --presets es2015,stage-2",
     "start": "npm run serv",
