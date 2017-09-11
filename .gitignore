@@ -1,0 +1,33 @@
+# HOUSEKEEPING
+.DS_Store
+node_modules
+npm-debug.log
+debug.log
+build
+dev-staging
+tests/coverage
+
+# WEBSTORM
+.idea
+
+# VIM
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# SUBLIME TEXT
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# VS CODE
+.vscode
+
+docs/
+tmp/
+temp/
