@@ -4,7 +4,7 @@
   "description": "homework nodeJS",
   "main": "server/app.js",
   "scripts": {
-    "serv": "cross-env NODE_ENV=development nodemon ./server/app.js --exec babel-node --presets es2015,stage-2",
+    "serv": "cross-env NODE_ENV=development nodemon ./server/app.js --exec babel-node",
     "start": "npm run serv",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,9 @@
     "babel-preset-stage-2": "^6.24.1",
     "cross-env": "^5.0.5",
     "nodemon": "^1.12.0"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "lodash": "^4.17.4"
   }
 }
