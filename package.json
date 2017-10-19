@@ -4,7 +4,7 @@
   "description": "homework nodeJS",
   "main": "server/app.js",
   "scripts": {
-    "serv": "cross-env NODE_ENV=development nodemon ./server/app.js --exec babel-node --action=io --file=users.csv -a test -f test.csv",
+    "serv": "cross-env NODE_ENV=development nodemon ./server/app.js --exec babel-node --action=transform --file=data/MOCK_DATA.csv ",
     "start": "npm run serv",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,7 +22,7 @@
     "lodash": "^4.17.4",
     "minimist": "^1.2.0",
     "request": "^2.83.0",
-    "split": "^1.0.1",
+    "split2": "^2.2.0",
     "through2": "^2.0.3"
   }
 }

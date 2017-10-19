@@ -3,4 +3,4 @@ import Streams from './utils/streams';
 
 console.log('application name -->', config.name);
 
-const stream = new Streams(process.argv);
+const stream = new Streams();
