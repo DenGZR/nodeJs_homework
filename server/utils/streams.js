@@ -58,6 +58,38 @@ class Streams {
             return console.log('Wrong input! File name = ', filePath );
         }
 
+        this.convertCsvToJson(filePath)
+            .pipe(process.stdout);
+    }
+
+    // task 7
+    transformToFile(filePath) {
+        if(!filePath) {
+            return console.log('Wrong input! File name = ', filePath );
+        }
+
+        const fileDir = path.dirname(filePath);
+        const filenameJson = path.basename(filePath, '.csv') + '.json';
+        const outputFilePath = this.getFilePath(path.join(fileDir, filenameJson));
+
+        this.convertCsvToJson(filePath)
+            .pipe(fs.createWriteStream(outputFilePath));
+    }
+
+    // task 8
+    cssBundlerfunction(filePath) {
+      if(!filePath) {
+          return console.log('Wrong input! File name = ', filePath );
+      }
+      console.log('call cssBundlerfunction');
+    }
+    //function return correct file path
+    getFilePath(filePath) {
+      return path.join(path.dirname(process.mainModule.filename), filePath);
+    }
+
+    //converter function csv to json return streem
+    convertCsvToJson(filePath) {
         const inputFilePath =  this.getFilePath(filePath);
         const stream = fs.createReadStream(inputFilePath);
         const parseCSV = () => {
@@ -100,32 +132,11 @@ class Streams {
             });
         };
 
-        stream
+        return stream
             .pipe(split2())
             .pipe(parseCSV())
             .pipe(pickFirst10())
-            .pipe(toJSON())
-            .pipe(process.stdout);
-    }
-
-    // task 7
-    transformToFile(filePath) {
-      if(!filePath) {
-          return console.log('Wrong input! File name = ', filePath );
-      }
-      console.log('call transformToFile');
-    }
-
-    // task 8
-    cssBundlerfunction(filePath) {
-      if(!filePath) {
-          return console.log('Wrong input! File name = ', filePath );
-      }
-      console.log('call cssBundlerfunction');
-    }
-
-    getFilePath(fileName) {
-      return path.join(path.dirname(process.mainModule.filename), fileName);
+            .pipe(toJSON());
     }
 
     httpClient() { /* ... */ }
