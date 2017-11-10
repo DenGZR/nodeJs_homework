@@ -17,3 +17,22 @@ export const users = [{
     name: 'Test2',
     email: 'test2@admin.com'
 }];
+
+
+export const products = [{
+    id: 0,
+    name: 'cookie',
+    price: '40'
+},{
+    id: 2,
+    name: 'meet',
+    price: '100'
+},{
+    id: 3,
+    name: 'bread',
+    price: '10'
+},{
+    id: 4,
+    name: 'cofe',
+    price: '65'
+}];
