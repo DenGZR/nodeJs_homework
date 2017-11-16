@@ -1,13 +1,15 @@
-import { products } from '../../db';
+import models from '../../models';
 
 export const getProducts = (req, res, next) => {
-    res.status(200).json(products);
+    models.Products.findAll().then((allProducts) => {
+        res.status(200).json(allProducts);
+    });
 };
 
-export const getProductsById = (req, res, next) => {
-    res.status(200).json({ data: event });
-};
-
-export const getProductsReviews = (req, res, next) => {
-    res.status(200).json({ data: event });
-};
+// export const getProductsById = (req, res, next) => {
+//     res.status(200).json({ data: event });
+// };
+//
+// export const getProductsReviews = (req, res, next) => {
+//     res.status(200).json({ data: event });
+// };

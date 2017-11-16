@@ -1,5 +1,5 @@
 import jsonwebtoken from 'jsonwebtoken';
-import config from '../../config/config.json';
+import config from '../../config/config1.json';
 
 export default function getLogin(req, res, next) {
     console.log('user ', req.user);

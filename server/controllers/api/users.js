@@ -1,6 +1,8 @@
-import { users } from '../../db';
+import models from '../../models';
 
 export const getUsers = (req, res, next) => {
-    res.status(200).json(users);
+    models.User.findAll().then((allUsers) => {
+        res.status(200).json(allUsers);
+    });
 };
 
