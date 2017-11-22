@@ -3,15 +3,11 @@ import mongoose, { Schema } from 'mongoose';
 const userSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     email: {
         type: String,
-        required: true
-    },
-    login: {
-        type: String,
-        required: true
+        required: true,
     },
     password: {
         type: String,
@@ -19,5 +15,7 @@ const userSchema = new Schema({
     },
 
 });
+
+
 
 export default mongoose.model('User', userSchema, 'users');

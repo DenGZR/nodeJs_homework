@@ -13,7 +13,8 @@ export default function getLogin(req, res, next) {
             data: {
                 user: {
                     email: user.email,
-                    username: user.name
+                    username: user.name,
+                    id: user._id
                 }
             },
             token
